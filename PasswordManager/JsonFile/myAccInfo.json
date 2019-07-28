@@ -1,0 +1,12 @@
+{
+	"Description": "Google account",
+	"UserId": "LeoNguyen",
+	"LoginUrl": "http://www.google.com",
+	"AccountNum": "3567546fg",
+	"Password": {
+		"Value": "vgfgfA1",
+		"StrengthNum": 71,
+		"StrengthText": "strong",
+		"LastReset": "2019-05-20"
+	}
+}

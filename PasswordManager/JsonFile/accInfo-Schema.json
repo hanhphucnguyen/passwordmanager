@@ -1,0 +1,53 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Account Information Schema",
+	"type": "object",
+	"required": [ "Description", "UserId", "Password" ],
+	"additionalProperties": false,
+	"properties": {
+		"Description": {
+			"type": "string",
+			"title": "The Description Schema"
+		},
+		"UserId": {
+			"type": "string",
+			"title": "The Userid Schema"
+		},
+		"LoginUrl": {
+			"type": "string",
+			"title": "The Loginurl Schema",
+			"format": "Uri"
+		},
+		"AccountNum": {
+			"type": "string",
+			"title": "The Accountnum Schema"
+		},
+		"Password": {
+			"type": "object",
+			"title": "The Password Schema",
+			"required": [ "Value", "StrengthNum", "StrengthText" ],
+			"additionalProperties": false,
+			"properties": {
+				"Value": {
+					"type": "string",
+					"title": "The Value Schema"
+				},
+				"StrengthNum": {
+					"type": "number",
+					"title": "The Strengthnum Schema",
+					"minimum": 0,
+					"maximum": 100
+				},
+				"StrengthText": {
+					"type": "string",
+					"title": "The Strengthtext Schema",
+					"enum": [ "very weak", "weak", "good", "strong", "very strong" ]
+				},
+				"LastReset": {
+					"type": "string",
+					"title": "The Lastreset Schema"
+				}
+			}
+		}
+	}
+}
